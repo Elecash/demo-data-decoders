@@ -1,0 +1,11 @@
+<span *ngIf="(shoppingList$ | async).isLoading">loading...</span>
+
+<ul>
+    <li *ngFor="let item of (shoppingList$ | async).items">
+        {{ item.title }}
+    </li>
+</ul>
+
+<div *ngIf="(shoppingList$ | async).error">
+    {{ (shoppingList$ | async).error }}
+</div>
