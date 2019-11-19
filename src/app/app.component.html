@@ -3,6 +3,9 @@
 <ul>
     <li *ngFor="let item of (shoppingList$ | async).items">
         {{ item.title }}
+        <p *ngIf="item.tags.length">
+            <span *ngFor="let tag of sortedTags(item)">{{ tag }}, </span>
+        </p>
     </li>
 </ul>
 

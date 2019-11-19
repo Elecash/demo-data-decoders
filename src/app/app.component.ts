@@ -5,6 +5,7 @@ import { ShoppingListStore } from './store';
 import { loadShoppingList, ShoppingListActions } from './store/actions';
 import { filter } from 'rxjs/operators';
 import { ShoppingListLoadResult } from './store/reducer';
+import { ShoppingItem } from './store/model';
 
 @Component({
     selector: 'app-root',
@@ -31,6 +32,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.store.dispatch(loadShoppingList());
+    }
+
+    sortedTags(item: ShoppingItem) {
+        return item.tags.sort();
     }
 
     ngOnDestroy() {

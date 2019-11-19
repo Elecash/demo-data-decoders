@@ -4,5 +4,11 @@
         "count": 12,
         "tags": [ "beer", "Żywiec", "Okocim", "Tyskie" ],
         "available": true
+    },
+    {
+        "title": "Nutella",
+        "count": 1,
+        "tags": [ "nutella", "chocolate", "cream", "gluttony" ],
+        "available": true
     }
 ]

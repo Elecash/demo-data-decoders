@@ -3,7 +3,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { ShoppingListActions } from './actions';
 import { catchError, map, mergeMap } from 'rxjs/operators';
 import { ShoppingListService } from './service';
-import { EMPTY, of } from 'rxjs';
+import { of } from 'rxjs';
 
 @Injectable()
 export class ShoppingListEffects {
@@ -20,5 +20,6 @@ export class ShoppingListEffects {
     constructor(
         private actions$: Actions,
         private shoppingListService: ShoppingListService
-    ) {}
+    ) {
+    }
 }
