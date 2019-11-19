@@ -20,7 +20,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
     constructor(private store: Store<ShoppingListStore>, private actions$: ScannedActionsSubject) {
         this.shoppingList$ = this.store.select(state => state.shoppingList);
+    }
 
+    ngOnInit() {
         this.subscriptions.push(
             this.actions$.pipe(
                 filter(action => action.type === ShoppingListActions.LOAD_SHOPPING_LIST_FAILURE)
@@ -28,9 +30,7 @@ export class AppComponent implements OnInit, OnDestroy {
                 action => console.log(action)
             )
         );
-    }
 
-    ngOnInit() {
         this.store.dispatch(loadShoppingList());
     }
 
