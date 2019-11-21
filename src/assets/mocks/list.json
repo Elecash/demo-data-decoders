@@ -1,14 +1,20 @@
 [
     {
-        "title": "Beers",
-        "count": 12,
-        "tags": [ "beer", "Żywiec", "Okocim", "Tyskie" ],
+        "title": "Boots",
+        "count": 2,
+        "tags": [ "motorcycle boots", "camper", "doctor martens" ],
         "available": true
     },
     {
-        "title": "Nutella",
+        "title": "Clothes",
         "count": 1,
-        "tags": [ "nutella", "chocolate", "cream", "gluttony" ],
+        "tags": [ "shirt", "leather jacket", "underwear", "leather pants" ],
+        "available": true
+    },
+    {
+        "title": "Motorbike",
+        "count": 1,
+        "tags": [ "harley-davidson", "chopper", "sunglasses" ],
         "available": true
     }
 ]
